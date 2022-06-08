@@ -36,6 +36,11 @@ def select(id):
     return book
 
 
+def delete_all():
+    sql = "DELETE FROM books"
+    run_sql(sql)
+
+
 def delete(id):
     sql = "DELETE FROM books WHERE id = %s"
     values = [id]

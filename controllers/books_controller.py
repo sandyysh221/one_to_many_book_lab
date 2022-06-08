@@ -19,7 +19,7 @@ def delete_book(id):
 
 
 @books_blueprint.route("/books/new", methods=["GET"])
-def book():
+def new_book():
     authors = author_repository.select_all()
     return render_template("books/new.html", all_authors=authors)
 
