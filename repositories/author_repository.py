@@ -32,3 +32,9 @@ def select_all():
         author = Author(row["name"], row["id"])
         authors.append(author)
     return authors
+
+
+def delete(id):
+    sql = "DELETE FROM authors WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

@@ -23,3 +23,9 @@ def select_all():
         book = Book(row["title"], row["genre"], author, row["id"])
         books.append(book)
     return books
+
+
+def delete(id):
+    sql = "DELETE FROM books WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
