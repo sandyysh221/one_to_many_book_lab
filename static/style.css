@@ -1,0 +1,105 @@
+:root {
+  --primary-color: #3c2c2b;
+  --secondary-color: #7d655c;
+  --accent-color: #a6715c;
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  background-image: url("../static/pexels-stanislav-kondratiev-2908984.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header {
+  padding: 1rem;
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 50px;
+}
+
+header > nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header > nav > ul > li > a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+header > nav > ul > li > a:hover {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.container {
+  background: var(--secondary-color);
+  border-color: var(--primary-color);
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+  margin-top: 75px;
+  padding: 30px 60px;
+  color: var(--primary-color);
+  max-width: 40rem;
+  box-shadow: var(--box-shadow);
+  opacity: 0.85;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.new-book-container {
+  background: var(--secondary-color);
+  border-color: var(--primary-color);
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+  margin-top: 75px;
+  padding: 20px 40px;
+  color: var(--primary-color);
+  max-width: 50rem;
+  box-shadow: var(--box-shadow);
+  opacity: 0.85;
+  text-align: center;
+  font-size: 2rem;
+}
+
+button {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.book-link {
+  text-decoration: none;
+}
+
+.book-link:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}

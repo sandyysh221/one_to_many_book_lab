@@ -16,10 +16,10 @@ author_repository.save(author_2)
 
 author_repository.select_all()
 
-book_1 = Book("The Lord of the Rings", "fantasy", author_1)
+book_1 = Book("The Lord of the Rings", "Fantasy", author_1)
 book_repository.save(book_1)
 
-book_2 = Book("Harry Potter and the Philosopher's Stone", "fantasy", author_2)
+book_2 = Book("Harry Potter and the Philosopher's Stone", "Fantasy", author_2)
 book_repository.save(book_2)
 
 book_repository.select_all()

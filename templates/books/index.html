@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %} {% for book in all_books %}
-<div class="books-container">
+<div class="container">
   Author: {{book.author.name}}
-  <p><a href="/books/{{book.id}}">{{book.title}}</a></p>
+  <p><a href="/books/{{book.id}}" class="book-link">{{book.title}}</a></p>
   <p>{{book.genre}}</p>
   <div class="buttons">
     <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">

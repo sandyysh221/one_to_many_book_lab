@@ -1,33 +1,34 @@
 {% extends 'base.html' %} {% block content %}
+<div class="new-book-container">
+  <form action="/books" method="post">
+    <div>
+      <p>Fill in the form below to add a new book to the library!</p>
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Title"
+        required
+        autofocus
+      />
+    </div>
 
-<form action="/books" method="post">
-  <div>
-    <label for="title">Title:</label>
-    <input
-      type="text"
-      id="title"
-      name="title"
-      placeholder="Book Title"
-      required
-      autofocus
-    />
-  </div>
+    <div>
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" name="genre" placeholder="Genre" required />
+    </div>
 
-  <div>
-    <label for="genre">Genre:</label>
-    <input type="text" id="genre" name="genre" placeholder="Genre" required />
-  </div>
-
-  <div>
-    <label for="author">Author:</label>
-    <select id="author" name="author_id">
-      {% for author in all_authors %}
-      <option value="{{author.id}}">{{author.name}}</option>
-      {% endfor %}
-    </select>
-  </div>
-
-  <button type="submit">Add Book</button>
-</form>
-
+    <div>
+      <label for="author">Author:</label>
+      <select id="author" name="author_id">
+        {% for author in all_authors %}
+        <option value="{{author.id}}">{{author.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <br />
+    <button type="submit">Add Book</button>
+  </form>
+</div>
 {% endblock %}
