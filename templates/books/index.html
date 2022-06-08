@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %} {% for book in all_books %}
+<div class="books-container">
+  Author: {{book.author.name}}
+  <p>{{book.title}}</p>
+  <p>{{book.genre}}</p>
+</div>
+{% endfor %} {% endblock %}
